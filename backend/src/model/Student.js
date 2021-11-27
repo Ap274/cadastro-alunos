@@ -66,4 +66,10 @@ export default class Student extends Model {
     });
     return this;
   }
+
+  static associate(models) {
+    this.hasMany(models.Photo, {
+      foreignKey: 'aluno_id',
+    });
+  }
 }
