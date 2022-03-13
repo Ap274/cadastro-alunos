@@ -13,7 +13,7 @@ module.exports = {
     ecmaVersion: "latest",
     requireConfigFile: false,
     sourceType: "module",
-    babelOption: {
+    babelOptions: {
       presets: ["@babel/preset-react"],
     },
   },
