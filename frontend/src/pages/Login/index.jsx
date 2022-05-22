@@ -5,15 +5,6 @@ import { Container } from '../../styles/GlobalStyles';
 import { Title } from './styled';
 
 export default function Login() {
-  useEffect(() => {
-    async function getData() {
-      const response = await axios.get('/alunos');
-      console.log(response.data);
-    }
-
-    getData();
-  }, []);
-
   const showMessage = () => {
     toast.success('Login realizado com sucesso');
     toast.error('Usuário ou senha inválida');
