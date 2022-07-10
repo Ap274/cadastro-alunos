@@ -22,8 +22,8 @@ module.exports = {
     'prettier/prettier': 'error',
     'import/prefer-default-export': 'off',
     'react/react-in-jsx-scope': 'off',
-    'react-hooks/rules-of-hooks': 'error', // Verifica as regras dos Hooks
-    'react-hooks/exhaustive-deps': 'warn', // Verifica as dependências de effects
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
     'default-param-last': 0,
   },
 };
