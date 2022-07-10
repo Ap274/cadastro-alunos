@@ -7,13 +7,21 @@ const INITIAL_STATE = {
 
 const loginReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case types.LOGIN: {
+    case types.LOGIN_REQUEST: {
+      toast.info(`Executando a requisição...`);
+      return state;
+    }
+    case types.LOGIN_SUCCESS: {
       toast.success(`Usuário logado: ${state.usuarioLogado}`);
       const newState = {
         ...state,
         usuarioLogado: !state.usuarioLogado,
       };
       return newState;
+    }
+    case types.LOGIN_FAILURE: {
+      toast.success(`Usuário logado: ${state.usuarioLogado}`);
+      return state;
     }
     default: {
       return state;
