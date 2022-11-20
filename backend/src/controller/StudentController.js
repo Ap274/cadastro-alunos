@@ -18,7 +18,7 @@ class StudentController {
     try {
       const students = await Student.findAll({
         attributes: ['id', 'name', 'lastname', 'email', 'age', 'weight', 'height'],
-        order: [['id', 'DESC']],
+        order: [['id', 'DESC'], [Photo, 'id', 'DESC']],
         include: {
           model: Photo,
           attributes: ['filename', 'url'],
@@ -48,7 +48,7 @@ class StudentController {
 
       const student = await Student.findByPk(id, {
         attributes: ['id', 'name', 'lastname', 'email', 'age', 'weight', 'height'],
-        order: [['id', 'DESC']],
+        order: [['id', 'DESC'], [Photo, 'id', 'DESC']],
         include: {
           model: Photo,
           attributes: ['filename', 'url'],
